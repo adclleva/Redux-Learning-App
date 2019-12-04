@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {Provider} from "react-redux" // this is a component from the react-redux dependency
+                                     // Redux uses context under the hood which is why we wrap the Provider Component arund the App component
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
