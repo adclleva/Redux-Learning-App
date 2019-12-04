@@ -6,16 +6,18 @@ import {Form, Button} from "react-bootstrap"
 function App(props) {
   const taskList = useSelector(taskList => taskList) // this is an array
   const dispatch = useDispatch() // we can utilize this for our button when we want to add a task
-  const [task, setTask] = useState()
+  const [task, setTask] = useState("")
 
   const displayTaskList = taskList.map((task, index) => {
+     /* I added a plus one to the index because it starts at 0*/
     return (
-      <h4 key={index} class="list-group-item list-group-item-action active">Task {index + 1}: {task}</h4>
+      <h4 key={index} class="list-group-item list-group-item-action active">Task {index + 1}: {task}</h4> 
     )
   })
 
-  function handleAddTask(task) {
-    dispatch({type:"ADD_TASK", payload: task})
+  function handleAddTask(task) { 
+    dispatch({type:"ADD_TASK", payload: task}) // this is cool because we are able to call our action creators
+    setTask("")
   }
 
   function handleChange(event) { // the onChange always handles an event

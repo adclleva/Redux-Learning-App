@@ -15,7 +15,7 @@ function deleteTask(task) {
 }
 
 
-function taskListReducer(taskList = ["create a task", "Read up redux"], action) { // reducers get an initial/current "state/value" and the action for their parameters
+function taskListReducer(taskList = ["create a task", "Read up redux", "Study more React"], action) { // reducers get an initial/current "state/value" and the action for their parameters
     switch(action.type) {
         case "ADD_TASK": 
             return [...taskList, action.payload]
