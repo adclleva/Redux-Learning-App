@@ -11,7 +11,7 @@ function App(props) {
   const displayTaskList = taskList.map((task, index) => {
      /* I added a plus one to the index because it starts at 0*/
     return (
-      <h4 key={index} class="list-group-item list-group-item-action active">Task {index + 1}: {task}</h4> 
+      <h4 key={index} className="list-group-item list-group-item-action active">Task {index + 1}: {task}</h4> 
     )
   })
 
@@ -26,8 +26,8 @@ function App(props) {
 
   return (
     <>
-      <div class="jumbotron">
-        <div class="list-group">
+      <div className="jumbotron">
+        <div className="list-group">
           <h1>Task List using Redux</h1>
           {displayTaskList}
         </div>
