@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from "react-redux" // this is a component from the react-redux dependency
-                                     // Redux uses context under the hood which is why we wrap the Provider Component arund the App component
+                                     // Redux uses context under the hood which is why we wrap the Provider Component around the App component
 
 import store from "./redux" // it is implied that we are getting the store from the index.js
 

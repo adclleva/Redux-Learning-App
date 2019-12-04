@@ -1,4 +1,4 @@
-import redux, {createStore} from "redux"
+import redux, {createStore} from "redux" // we only import redux because we aren't inside a react app just a js file
 
 function addTask(task) { // action creators always return a key of type and a value of the action
     return {
@@ -15,7 +15,7 @@ function deleteTask(task) {
 }
 
 
-function taskListReducer(taskList = [], action) { // reducers get an initial/current "state/value" and the action for their parameters
+function taskListReducer(taskList = ["create a task"], action) { // reducers get an initial/current "state/value" and the action for their parameters
     switch(action.type) {
         case "ADD_TASK": 
             return [...taskList, action.payload]
