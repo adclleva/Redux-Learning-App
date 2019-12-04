@@ -34,6 +34,10 @@ store.subscribe(() => {
     console.log(store.getState())
 })
 
+export {
+    addTask,
+    deleteTask
+}
 export default store
 
 /**
